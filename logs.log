@@ -1,0 +1,52 @@
+WARN StatusConsoleListener Error while converting string [logs.log] to type [class org.apache.logging.log4j.core.appender.ConsoleAppender$Target]. Using default value [null].
+ java.lang.IllegalArgumentException: No enum constant org.apache.logging.log4j.core.appender.ConsoleAppender.Target.LOGS.LOG
+	at java.base/java.lang.Enum.valueOf(Enum.java:240)
+	at org.apache.logging.log4j.util.EnglishEnums.valueOf(EnglishEnums.java:67)
+	at org.apache.logging.log4j.util.EnglishEnums.valueOf(EnglishEnums.java:50)
+	at org.apache.logging.log4j.core.config.plugins.convert.EnumConverter.convert(EnumConverter.java:36)
+	at org.apache.logging.log4j.core.config.plugins.convert.EnumConverter.convert(EnumConverter.java:27)
+	at org.apache.logging.log4j.core.config.plugins.convert.TypeConverters.convert(TypeConverters.java:420)
+	at org.apache.logging.log4j.core.config.plugins.visitors.AbstractPluginVisitor.convert(AbstractPluginVisitor.java:151)
+	at org.apache.logging.log4j.core.config.plugins.visitors.PluginBuilderAttributeVisitor.visit(PluginBuilderAttributeVisitor.java:49)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.injectFields(PluginBuilder.java:187)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:123)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:1138)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:1063)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:1055)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:664)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:258)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:304)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:621)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:694)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:711)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:253)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:155)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
+	at Test$.delayedEndpoint$Test$1(Test.scala:26)
+	at Test$delayedInit$body.apply(Test.scala:7)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at scala.Function0.apply$mcV$sp$(Function0.scala:42)
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)
+	at scala.App.$anonfun$main$1(App.scala:98)
+	at scala.App.$anonfun$main$1$adapted(App.scala:98)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:576)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:574)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)
+	at scala.App.main(App.scala:98)
+	at scala.App.main$(App.scala:96)
+	at Test$.main(Test.scala:7)
+	at Test.main(Test.scala)
+10:41:40.972 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=3517cfcd3050758d3a7260c8f45938cb,dt.span_id=c7776256e7ddec2f]
+10:41:50.939 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=b49e1d4702dcfab8f8b03267fb40e01e,dt.span_id=e5d8a7aca4cf40fd]
+10:42:00.939 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=03cb32b87589f288c3b0806b5c0d81ef,dt.span_id=c6c10b7cdf697bf0]
+10:42:10.939 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=9430e6939c531893efd35b09bd70c281,dt.span_id=c3649198e986e7cc]
+10:42:20.940 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=00a41c189dd1cccc2e2f0b683a76c1f2,dt.span_id=9ab458e8554300ba]
+10:42:30.940 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=8912e0a534a6204111b20b853ed3c2bd,dt.span_id=79fbd26ff8c248ad]
+10:42:40.940 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=75d4f309c80dd1ac1693c84e0f6a6ec7,dt.span_id=574836cb2481ceb0]
+10:42:50.941 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=c9b94b704c4d618237189cc5bf74df4d,dt.span_id=37c7a25320d86cc2]
+10:43:00.941 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=e03bd843ade5b4e8756a4035a63f5411,dt.span_id=60fd32e85e675c4f]
+10:43:10.941 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=0010f9eb8e6ac026aa08cafd25a09a9b,dt.span_id=213a2a9ea1af499c]
+10:43:20.941 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=9b64c0e4cf1c6bb1922ce4239cd4d1ae,dt.span_id=1869a8da55614596]
+10:43:30.941 [MySystem-akka.actor.default-dispatcher-5] ERROR Test$ - Error Message Log [dt.trace_id=5f35050757173618f599229cff436c0b,dt.span_id=173de89667306817]
